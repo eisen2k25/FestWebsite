@@ -1,0 +1,34 @@
+.title-sponsor-heading, .co-sponsor-heading {
+    margin: 20px;
+    font-size: 32px;
+    text-align: center; /* Center align the headings */
+}
+
+.title-sponsor-div, .co-sponsor-div {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 10px;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between images */
+}
+
+.title-sponsor-div img, .co-sponsor-div img {
+    width: 100%;
+    max-width: 500px; /* Set max-width to make it responsive */
+    height: auto;
+    object-fit: contain; /* Ensure images are not stretched */
+}
+
+@media (max-width: 768px) {
+    .title-sponsor-div, .co-sponsor-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .title-sponsor-div img, .co-sponsor-div img {
+        max-width: 90%; /* Adjust the max-width for smaller screens */
+    }
+}

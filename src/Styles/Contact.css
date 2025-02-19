@@ -1,0 +1,63 @@
+/* Cards container for grid layout */
+.cards-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row for larger screens */
+    justify-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cards-container {
+      grid-template-columns: 1fr; /* 1 card per row for smaller screens */
+    }
+  }
+  
+  /* Individual card styling */
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .card-info p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  
+  .dept-image {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  

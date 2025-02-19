@@ -1,0 +1,156 @@
+/* General reset */
+body {
+  margin: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color:black;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition for the navbar */
+}
+
+/* Logo styling */
+.logo {
+  font-size: 2.0rem;
+  padding-right: 20px;
+}
+
+.logo img {
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth transition for logo */
+}
+
+/* Hover effect for logo image */
+.logo:hover img {
+  transform: scale(1.1); /* Slight zoom effect when hovered */
+}
+
+/* Nav Links Styling */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  padding-left: 15px;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in for links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(255, 239, 242);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+  position: relative;
+  transition: color 0.3s ease; /* Smooth color transition for links */
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+  color: yellow; /* Change color on hover */
+}
+
+/* Hamburger Menu Icon Styling */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transformation for the icon */
+}
+
+/* Hamburger Bar Styling */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease; /* Smooth transitions for hamburger bars */
+}
+
+/* Open state for nav-links on mobile */
+.nav-links.open {
+  display: flex;
+  opacity: 1; /* Ensure links appear with opacity transition */
+}
+
+/* Default nav-links (will be hidden on small screen) */
+.nav-links {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.nav-links a {
+  font-size: 1.2rem;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Adjust logo position */
+  .logo {
+    padding-right: 0;
+  }
+
+  /* Hide nav-links on mobile by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in transition for mobile */
+  }
+
+  /* Display nav-links when 'open' class is added */
+  .nav-links.open {
+    display: flex;
+    opacity: 1;
+  }
+
+  /* Hamburger menu icon positioning and effect */
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate hamburger bars when active */
+  .bar.active {
+    transform: rotate(45deg);
+  }
+
+  .bar:nth-child(2).active {
+    opacity: 0;
+  }
+
+  .bar:nth-child(3).active {
+    transform: rotate(-45deg);
+  }
+
+  /* Animation for smooth display of nav items */
+  .nav-links a {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  /* Fade-in animation for each nav link */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

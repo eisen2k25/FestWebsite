@@ -1,0 +1,128 @@
+/* Main container for the events section */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Section styling (Workshop Topics, Technical Events, etc.) */
+.section {
+  margin-bottom: 30px;
+}
+
+.section h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cards container for grid layout */
+.cards-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row by default */
+  justify-items: center; /* Center align cards */
+  opacity: 0; /* Initially hide cards container */
+  animation: fadeIn 1s forwards; /* Apply fade-in effect */
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px; /* Fixed width for consistent alignment */
+  text-align: center;
+  opacity: 0; /* Initially hide each card */
+  animation: swipeIn 1s ease-in-out forwards; /* Apply swipe-in animation */
+  animation-delay: 0.3s; /* Delay animation for each card */
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+.card-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card-info p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.registration-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registration-button:hover {
+  background-color: #0056b3;
+}
+
+/* Swipe-in animation for cards */
+@keyframes swipeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px); /* Start from right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Fade-in animation for the cards container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+
+  .card {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .registration-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,213 @@
+.about {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 30px;
+}
+
+.aboutTop {
+  width: 100%;
+  min-height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 0 20px; /* Add some padding on the sides for better readability */
+}
+
+.aboutBottom p {
+  max-width: 1200px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.about .aboutBottom h1 {
+  font-weight: 400;
+  font-size: 70px;
+  color: black;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-40px);
+}
+
+.jntugv-image {
+  height: 120px;
+  width: 120px;
+}
+
+button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  background-color: #121619;
+  height: 50px;
+  width: 180px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.newSection {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.aboutDepartment {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.aboutDepartment h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.aboutDepartment p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.personsInvolved {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.personsInvolved h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.personSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.personCard {
+  border: 3px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px 10px 20px 15px;
+  box-sizing: border-box;
+}
+
+.dept-image {
+  width: 100%;
+  height: auto;
+}
+
+.personCard img {
+  width: 100%;
+  height: auto;
+}
+
+.personCard h3 {
+  margin: 10px 0;
+}
+
+.personCard p {
+  margin: 5px 0;
+}
+
+.thanks-note {
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about .aboutBottom h1 {
+    font-size: 40px; /* Adjust the font size for mobile */
+  }
+
+  .aboutDepartment h2 {
+    font-size: 24px; /* Smaller heading on mobile */
+  }
+
+  .aboutDepartment p {
+    font-size: 14px; /* Adjust text size for mobile */
+    line-height: 1.4;
+    padding: 0 10px; /* Add some padding for better readability */
+  }
+
+  .aboutBottom p {
+    font-size: 16px; /* Adjust paragraph font size */
+    padding: 0 10px; /* Add padding for mobile view */
+  }
+
+  button {
+    width: 100%; /* Make button full-width on mobile */
+    font-size: 18px;
+  }
+
+  .newSection,
+  .aboutDepartment {
+    padding: 0 10px; /* Add padding to new sections */
+  }
+
+  .personSection {
+    justify-content: center; /* Center the person cards on mobile */
+  }
+
+  .personCard {
+    width: 90%; /* Make person cards smaller on mobile */
+    margin: 10px 0; /* Adjust margins */
+  }
+
+  .thanks-note {
+    font-size: 24px; /* Smaller thanks note on mobile */
+  }
+
+  .jntugv-image {
+    height: 80px;
+    width: 80px; /* Reduce the size of the logo on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .about .aboutBottom h1 {
+    font-size: 30px; /* Further reduce font size for very small screens */
+  }
+
+  .aboutDepartment h2 {
+    font-size: 22px; /* Further reduce heading size */
+  }
+
+  .aboutDepartment p {
+    font-size: 13px; /* Even smaller text for very small screens */
+  }
+
+  button {
+    width: 100%;
+    height: 45px;
+  }
+
+  .personCard {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .jntugv-image {
+    height: 70px;
+    width: 70px;
+  }
+
+  .thanks-note {
+    font-size: 20px;
+  }
+}

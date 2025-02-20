@@ -38,7 +38,7 @@ function Home() {
 
       {/* Additional Section Before Footer */}
       <div className="additional-section">
-        <h2>Don't Miss Out!</h2>
+        <h2>Don't Miss Out! ❤️</h2>
         <p>We have exciting events lined up for you. Stay tuned for more updates.</p>
       </div>
     </div>

@@ -31,7 +31,7 @@ function Events() {
                 to="https://docs.google.com/forms/d/e/1FAIpQLSc8MiHUBJOrL-fq_YgpBjn-NnBl2038xQM_MlOqnDocP3_HmQ/viewform?usp=sf_link"
                 target="_blank"
               >
-                <button className="registration-button">Register</button>
+                <button className="registration-button">Register btn</button>
               </Link>
             </div>
           </div>

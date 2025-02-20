@@ -1,42 +1,156 @@
-/* ==============================
-   Home Container
-   ============================== */
-   .home {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
+.home {
+  display: grid;
+  grid-template-rows: auto auto auto; /* Three rows: carousel, invitation card, additional section */
+  gap: 20px; /* Space between sections */
+  min-height: 100vh; /* Full viewport height */
+}
+
+.carousel-section {
+  width: 100%;
+  border-radius: 30px;
   
-  /* ==============================
-     Carousel Styles
-     ============================== */
-  .home-carousel {
-    width: 100%;
-    height: auto;
+}
+
+.home-carousel {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.invitation-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+}
+
+.invitation-card-section h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.invitation-card-section p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px; /* Limit card width for larger screens */
+  width: 100%; /* Make card responsive */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Additional Section Before Footer */
+.additional-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #eaeaea;
+  border-top: 2px solid #ccc;
+  text-align: center;
+}
+
+.additional-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.additional-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .home {
+    gap: 10px; /* Reduce gap for smaller screens */
   }
-  
-  /* Ensures that the carousel images fill their container while maintaining aspect ratio */
-  .home-carousel .slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+
+  .invitation-card-section,
+  .additional-section {
+    padding: 10px; /* Reduce padding for smaller screens */
   }
-  
-  /* ==============================
-     Responsive Styles for Large Devices
-     ============================== */
-  @media screen and (min-width: 1024px) {
-    .home {
-      max-width: 1200px; /* Constrain width for large screens */
-    }
+
+  .invitation-card-section h2,
+  .additional-section h2 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
   }
-  
-  /* ==============================
-     Responsive Styles for Small Devices
-     ============================== */
-  @media screen and (max-width: 768px) {
-    .home {
-      padding: 0 1rem; /* Add slight horizontal padding on small devices */
-    }
+
+  .invitation-card-section p,
+  .additional-section p {
+    font-size: 1rem; /* Smaller font size for mobile */
   }
-  
+
+  .card {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    gap: 5px; /* Further reduce gap for very small screens */
+  }
+
+  .invitation-card-section h2,
+  .additional-section h2 {
+    font-size: 1.2rem; /* Even smaller font size for very small screens */
+  }
+
+  .invitation-card-section p,
+  .additional-section p {
+    font-size: 0.9rem; /* Even smaller font size for very small screens */
+  }
+
+  .card {
+    padding: 10px; /* Further reduce padding for very small screens */
+  }
+
+  .cta-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

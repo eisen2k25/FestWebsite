@@ -1,109 +1,105 @@
-/* ==============================
-   Contact Page General Styles
-   ============================== */
-   .contact-container {
-    padding: 2rem;
-    text-align: center;
-    background-color: #f9f9f9;
-  }
-  
-  /* ==============================
-     Section Headings
-     ============================== */
-  .section-heading {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 2rem;
-  }
-  
-  /* ==============================
-     Cards Container & Card Styles
-     ============================== */
+.contact-container {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1.5rem;
+}
+
+.card-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-role {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #444;
+}
+
+.card-dept {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.card-contact {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.dept-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border: 3px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dept-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
   .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-image {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    max-width: 320px;
   }
-  
-  .card-info {
-    padding: 1.5rem;
-    text-align: left;
-  }
-  
-  .card-info h2 {
-    font-size:1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .card-info p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* ==============================
-     Department Section Styles
-     ============================== */
-  .dept-image {
-    width: 100%;
-    max-width: 600px;
-    height:100%;
-    margin: 1rem 0;
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
-    border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    border: 2px solid #333;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* ==============================
-     Divider Style
-     ============================== */
-  .divider {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 2rem 0;
-  }
-  
-  /* ==============================
-     Responsive Design
-     ============================== */
-  @media (max-width: 768px) {
-    .cards-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .card {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-  
+}

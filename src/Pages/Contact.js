@@ -15,10 +15,10 @@ function Contact() {
               className="card-image"
             />
             <div className="card-info">
-              <h2>Asif Pathan</h2>
-              <p>Ethical Hacker</p>
-              <p>ECE, BITS Vizag</p>
-              <p>
+              <h2 className="card-name">Asif Pathan</h2>
+              <p className="card-role">Ethical Hacker</p>
+              <p className="card-dept">ECE, BITS Vizag</p>
+              <p className="card-contact">
                 Contact: <br />
                 asif6302104@gmail.com
               </p>
@@ -27,15 +27,15 @@ function Contact() {
 
           <div className="card">
             <img
-              src={process.env.PUBLIC_URL + 'https://res.cloudinary.com/dkuriblkh/image/upload/v1735800751/dh6fzc9rtvfvknxqryyw.jpg'}
+              src="https://res.cloudinary.com/dkuriblkh/image/upload/v1735800751/dh6fzc9rtvfvknxqryyw.jpg"
               alt="Mahesh Devu"
               className="card-image"
             />
             <div className="card-info">
-              <h2>Mahesh Devu</h2>
-              <p>MeT, JNTUGV</p>
-              <p>Full-Stack Web Developer</p>
-              <p>
+              <h2 className="card-name">Mahesh Devu</h2>
+              <p className="card-role">MeT, JNTUGV</p>
+              <p className="card-dept">Full-Stack Web Developer</p>
+              <p className="card-contact">
                 Contact: <br />
                 maheshdevu17@gmail.com <br />
                 Ph.no: +91-9493167399
@@ -50,13 +50,57 @@ function Contact() {
               className="card-image"
             />
             <div className="card-info">
-              <h2>Vivek Devarakonda</h2>
-              <p>MeT, JNTUGV</p>
-              <p>Full-Stack Web Developer</p>
-              <p>
+              <h2 className="card-name">Vivek Devarakonda</h2>
+              <p className="card-role">MeT, JNTUGV</p>
+              <p className="card-dept">Full-Stack Web Developer</p>
+              <p className="card-contact">
                 Contact: <br />
                 vivekdevarakonda123@gmail.com <br />
                 Ph.no: +91-9441008408
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr className="divider" />
+
+      {/* Section: Event Coordinators */}
+      <section className="contact-section">
+        <h1 className="section-heading">Coordinators</h1>
+        <div className="cards-container">
+          <div className="card">
+            <img
+              src={process.env.PUBLIC_URL + '/Fest Coordinator.jpg'}
+              alt="John Doe"
+              className="card-image"
+            />
+            <div className="card-info">
+              <h2>Rapaka uday kumar</h2>
+              <p>Fest Coordinator</p>
+              <p>Metallurgy, JNTUGV</p>
+              <p>
+                Contact: <br />
+                Udayrapaka65@gmail.comm <br />
+                Ph.no: +91 70320 59547
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <img
+              src={process.env.PUBLIC_URL + '/student coordinator.jpg'}
+              alt="Jane Smith"
+              className="card-image"
+            />
+            <div className="card-info">
+              <h2>Sandeep Karuturi</h2>
+              <p>Student Coordinator</p>
+              <p>Metallurgy, JNTUGV</p>
+              <p>
+                Contact: <br />
+                sandeepkaruturi058@gmail.com <br />
+                Ph.no: +91 70753 06164
               </p>
             </div>
           </div>

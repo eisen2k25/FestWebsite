@@ -11,6 +11,7 @@ import Events from './Pages/Events';
 import Sponsors from './Pages/Sponsors';
 import SpotGames from './Pages/SpotGames';
 import Contact from './Pages/Contact';
+import Gallery from './Pages/Gallery';
 import Preloader from './Components/Preloaders/Preloader';
 import NotFound from './Components/Error/NotFound';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
@@ -42,6 +43,7 @@ function App() {
             <Route path="/Sponsors" element={<Sponsors/>}/>
             <Route path="/SpotGames" element={<SpotGames/>}/>
             <Route path="/Contact" element={<Contact />} />
+            <Route path="/Gallery" element={<Gallery />} />
             {/* Catch-all route for paths not matching any above */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,28 +1,47 @@
+/* Footer.css */
 .footer {
-    width: 100%;
-    height: 200px;
-    background-color: #121619;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 10px;
-  }
-  
-  .socialMedia-1 svg {
-    color:rgb(207, 11, 161);
-    margin: 20px;
-    font-size: 60px;
-    cursor: pointer;
-  }
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
 
-  .socialMedia-2 svg {
-    color:rgb(233, 233, 233);
-    margin: 20px;
-    font-size: 60px;
-    cursor: pointer;
-  }
-  
-  .footer p {
-    color: white;
-  }
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Specific colors for Instagram and Email icons */
+.instagram-icon {
+  color: #E1306C; /* Instagram Pink */
+}
+
+.email-icon {
+  color: #4285F4; /* Google Blue */
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-top: 10px;
+}

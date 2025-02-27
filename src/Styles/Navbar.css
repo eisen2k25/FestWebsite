@@ -5,7 +5,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-  background-color:black;
+  background-color:black ;
   color: white;
   padding: 15px;
   display: flex;
@@ -50,7 +50,7 @@ body {
 
 /* Hover effect for nav links */
 .nav-links a:hover {
-  color: yellow; /* Change color on hover */
+  color: grey; /* Change color on hover */
 }
 
 /* Hamburger Menu Icon Styling */

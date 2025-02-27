@@ -1,0 +1,115 @@
+/* Gallery Layout */
+.gallery-layout {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header Styling */
+.gallery-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gallery-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Section Container */
+.gallery-sections-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-section {
+  flex: 1;
+  min-width: 45%;
+}
+
+.gallery-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Gallery Items */
+.gallery-item {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img,
+.gallery-item video,
+.gallery-item iframe {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: popupFadeIn 0.3s ease-in-out;
+}
+
+.modal-content img, 
+.modal-content video, 
+.modal-content iframe {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+/* Animation */
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

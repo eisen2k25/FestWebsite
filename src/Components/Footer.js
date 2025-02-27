@@ -5,7 +5,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import "../Styles/Footer.css";
 
 function Footer() {
-  
   const openInstagram = () => {
     window.open('https://www.instagram.com/eisen25_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==/', '_blank');
   };
@@ -15,17 +14,15 @@ function Footer() {
   };
 
   return (
-    <div className="footer">
-      <div className="socialMedia-1">
-        <InstagramIcon onClick={openInstagram} />
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="socialMedia">
+          <InstagramIcon onClick={openInstagram} className="icon instagram-icon" />
+          <EmailIcon onClick={sendEmail} className="icon email-icon" />
+        </div>
+        <p className="footer-text">&copy; {new Date().getFullYear()} EISEN 2K25. All rights reserved ❤️.</p>
       </div>
-      <div className="socialMedia-2">
-      <EmailIcon onClick={sendEmail} />
-      </div>
-      <br/>
-      <p>&copy; All rights reserved to EISEN 2K25❤️.</p>
-    </div>
-    
+    </footer>
   );
 }
 

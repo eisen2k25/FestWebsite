@@ -17,6 +17,34 @@
   color: #555;
 }
 
+/* Upload Section */
+.gallery-upload {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gallery-upload input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gallery-upload button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.gallery-upload button:hover {
+  background: #0056b3;
+}
+
 /* Section Container */
 .gallery-sections-container {
   display: flex;
@@ -53,6 +81,7 @@
   align-items: center;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
 }
 
 .gallery-item img,
@@ -66,6 +95,24 @@
 
 .gallery-item:hover {
   transform: scale(1.05);
+}
+
+/* Delete Button */
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+.delete-button:hover {
+  background: rgba(255, 0, 0, 1);
 }
 
 /* Modal Styling */
@@ -111,5 +158,25 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-sections-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-section {
+    width: 100%;
+  }
+
+  .gallery-upload {
+    flex-direction: column;
+  }
+
+  .gallery-upload input {
+    width: 100%;
   }
 }
